@@ -22,6 +22,8 @@ import android.webkit.WebViewClient;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 import android.os.Handler;
+import com.crashlytics.android.Crashlytics;
+import io.fabric.sdk.android.Fabric;
 
 public class HomeActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -38,6 +40,7 @@ public class HomeActivity extends AppCompatActivity
             window.setStatusBarColor(ContextCompat.getColor(this, R.color.colorAccent));
         }
         setContentView(R.layout.activity_home);
+        Fabric.with(this, new Crashlytics());
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
