@@ -141,7 +141,7 @@ public class HomeActivity extends AppCompatActivity
             }
         } else if (id == R.id.nav_live_market) {
             if (Utils.isConnected(this)) {
-                webview.loadUrl("https://www.nseindia.com/live_market/dynaContent/live_watch/equities_stock_watch.htm");
+                webview.loadUrl("https://www.google.co.in/finance");
             } else {
                 Toast.makeText(HomeActivity.this, getString(R.string.err_no_internet), Toast.LENGTH_LONG).show();
             }
@@ -154,6 +154,24 @@ public class HomeActivity extends AppCompatActivity
         } else if (id == R.id.nav_about) {
             if (Utils.isConnected(this)) {
                 webview.loadUrl("http://www.takingforward.com/about");
+            } else {
+                Toast.makeText(HomeActivity.this, getString(R.string.err_no_internet), Toast.LENGTH_LONG).show();
+            }
+        } else if (id == R.id.nav_indian_market) {
+            if (Utils.isConnected(this)) {
+                webview.loadUrl("http://m.economictimes.com/");
+            } else {
+                Toast.makeText(HomeActivity.this, getString(R.string.err_no_internet), Toast.LENGTH_LONG).show();
+            }
+        } else if (id == R.id.nav_world_market) {
+            if (Utils.isConnected(this)) {
+                webview.loadUrl("http://mobile.reuters.com/");
+            } else {
+                Toast.makeText(HomeActivity.this, getString(R.string.err_no_internet), Toast.LENGTH_LONG).show();
+            }
+        } else if (id == R.id.nav_earning_calendar) {
+            if (Utils.isConnected(this)) {
+                webview.loadUrl("https://takingforward.com/marketstatview.php");
             } else {
                 Toast.makeText(HomeActivity.this, getString(R.string.err_no_internet), Toast.LENGTH_LONG).show();
             }
