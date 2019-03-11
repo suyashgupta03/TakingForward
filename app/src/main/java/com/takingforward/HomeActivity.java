@@ -1,5 +1,6 @@
 package com.takingforward;
 
+import android.annotation.SuppressLint;
 import android.graphics.Bitmap;
 import android.os.Build;
 import android.os.Bundle;
@@ -31,6 +32,7 @@ public class HomeActivity extends AppCompatActivity
     private ProgressBar progressBar;
     private boolean doubleBackToExitPressedOnce = false;
 
+    @SuppressLint("SetJavaScriptEnabled")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
